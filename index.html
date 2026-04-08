@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon Twisting & Magic Entertainment | Jim Harden</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h2 {
+            font-size: 1.3em;
+            font-weight: 400;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .hero p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .checklist {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .checklist span {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,107,107,0.5);
+        }
+        
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            margin: 25px 0 15px;
+            font-size: 1.3em;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .problem-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .problem-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.05em;
+        }
+        
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features li {
+            padding: 15px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.05em;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .objection {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .objection strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .guarantee {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .guarantee h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .final-cta {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .final-cta h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+        }
+        
+        .ps {
+            font-style: italic;
+            color: #666;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            
+            .hero h2 {
+                font-size: 1.1em;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .checklist {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Your Party Is 48 Hours Away...<br>And You Still Don't Have Entertainment?</h1>
+            <h2>A Professional Balloon Artist & Magician Who Shows Up, Engages Every Guest, and Creates Memories That Last</h2>
+            <p>Transform your event from "just another party" into <strong>the celebration everyone talks about for months</strong> — without you lifting a finger.</p>
+            
+            <div class="checklist">
+                <span>✓ Available for birthdays, corporate events, schools</span>
+                <span>✓ Serving Pinellas Park & Tampa Bay area</span>
+                <span>✓ 25+ years of entertainment experience</span>
+            </div>
+            
+            <a href="mailto:james@jameslloydharden.com" class="cta-button">BOOK NOW — SECURE YOUR DATE</a>
+        </div>
+
+        <!-- The Scenario -->
+        <div class="section">
+            <h2>The Scenario You Know Too Well</h2>
+            <p>It's Tuesday. The party is Saturday. You've got the cake ordered, the decorations bought, and the invitations sent. But there's one thing still keeping you up at night...</p>
+            <p><strong>"How am I going to keep 20 kids entertained for 2 hours?"</strong></p>
+            <p>You've seen it before. Kids running wild. Parents checking their watches. That awkward moment when the pizza is gone and everyone is just... waiting.</p>
+            <p>You want this party to be special. You want your child to feel like the star. You want the other parents to ask, <em>"How did you pull this off?"</em></p>
+            <p>But right now? You're one Google search away from hiring a teenager in a clown costume who may or may not show up.</p>
+        </div>
+
+        <!-- The Problem -->
+        <div class="section">
+            <h2>Here's What Happens Without Real Entertainment</h2>
+            <ul class="problem-list">
+                <li><span class="emoji">❌</span> <strong>The first 30 minutes:</strong> Chaos. Kids bouncing off walls while you scramble to find something for them to do.</li>
+                <li><span class="emoji">❌</span> <strong>The middle hour:</strong> A few kids play on their phones. The rest start asking "When is the party over?" Your child looks disappointed.</li>
+                <li><span class="emoji">❌</span> <strong>The final stretch:</strong> Parents start leaving early. Your carefully planned party fizzles out with a whimper.</li>
+                <li><span class="emoji">❌</span> <strong>Monday at school:</strong> Nobody mentions the party. It was fine. Forgettable. Just like every other weekend.</li>
+            </ul>
+        </div>
+
+        <!-- The Solution -->
+        <div class="section">
+            <h2>There's a Better Way</h2>
+            <p>What if you could walk into your child's party completely relaxed? Knowing that for the next 2 hours, a professional entertainer has every single child completely engaged?</p>
+            <p><strong>That's exactly what I do.</strong></p>
+            <p>I'm Jim Harden — a professional balloon artist and magician with 25+ years of entertainment experience. I don't just show up and do a few tricks. I create an experience.</p>
+        </div>
+
+        <!-- How It Works -->
+        <div class="section">
+            <h2>How It Works</h2>
+            
+            <h3>Step 1: We Plan Together</h3>
+            <p>You tell me about your event — age range, party theme, special requests. I recommend the perfect entertainment package.</p>
+            
+            <h3>Step 2: I Show Up Early</h3>
+            <p>30 minutes before the party starts, I'm set up and ready. No stress for you. No last-minute scrambling.</p>
+            
+            <h3>Step 3: The Magic Happens</h3>
+            <p>I engage the kids with interactive magic tricks they can't explain. Then every child gets a custom balloon creation — not just a dog or sword, but whatever they request. Dragons. Princess crowns. Superhero weapons.</p>
+            
+            <h3>Step 4: You Take Credit</h3>
+            <p>Parents ask how you found me. Kids talk about the party for weeks. You get to be the hero who threw the best party ever.</p>
+        </div>
+
+        <!-- What You Get -->
+        <div class="section">
+            <h2>What You Get</h2>
+            <ul class="features">
+                <li><strong>90 Minutes of Balloon Twisting</strong> — Custom creations for every child (and adults too!). Dragons, princess crowns, superhero weapons, animals — whatever they request.</li>
+                <li><strong>30-Minute Professional Magic Show</strong> — Age-appropriate interactive tricks where kids become the stars of the show.</li>
+                <li><strong>Full Setup & Cleanup</strong> — I bring everything. You bring nothing.</li>
+                <li><strong>25+ Years Experience</strong> — I've entertained at thousands of events. No surprises.</li>
+                <li><strong>Fully Insured & Background Checked</strong> — Professional peace of mind.</li>
+                <li><strong>Tampa Bay Local</strong> — Based in Pinellas Park. I know the area and the venues.</li>
+            </ul>
+        </div>
+
+        <!-- Why This Works -->
+        <div class="section">
+            <h2>Why This Works</h2>
+            <p><strong>Kids need structure.</strong> Left alone, they get bored or wild. My entertainment provides guided engagement that keeps them focused and happy.</p>
+            <p><strong>Parents need a break.</strong> While I'm working, you get to actually enjoy your child's party. Take photos. Talk to other adults. Breathe.</p>
+            <p><strong>Memories matter.</strong> Years from now, your child won't remember the cake flavor. They'll remember the magician who made them feel special.</p>
+        </div>
+
+        <!-- Objection Handling -->
+        <div class="section">
+            <h2>Common Questions</h2>
+            
+            <div class="objection">
+                <strong>"Isn't this expensive?"</strong>
+                Consider the alternative: Renting a bounce house ($150+) plus buying party favors ($50+) plus the stress of managing everything yourself. For a similar investment, you get a professional who handles the entertainment completely.
+            </div>
+            
+            <div class="objection">
+                <strong>"Will the kids actually pay attention?"</strong>
+                Yes. My shows are designed for children's attention spans. Interactive tricks keep them engaged. Balloon twisting gives them something to take home. I've done this thousands of times — it works.
+            </div>
+            
+            <div class="objection">
+                <strong>"What if you're late or don't show up?"</strong>
+                I arrive 30 minutes early, every time. But if you're concerned, know that I'm fully insured and background checked. Professionalism is my reputation.
+            </div>
+            
+            <div class="objection">
+                <strong>"My child is shy — will they participate?"</strong>
+                Absolutely. I read the room. Shy kids can watch and still get a balloon. Confident kids can be my assistants. Every child feels included at their comfort level.
+            </div>
+        </div>
+
+        <!-- Guarantee -->
+        <div class="section guarantee">
+            <h3>100% Satisfaction Guarantee</h3>
+            <p>If you're not completely thrilled with my performance, you don't pay. No arguments. No hassle.</p>
+            <p>I'm confident in my service because I've refined it over 25 years. But I want you to feel completely secure in your decision.</p>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="section final-cta">
+            <h2>Ready to Make This the Party Everyone Remembers?</h2>
+            <a href="mailto:james@jameslloydharden.com" class="cta-button">YES! BOOK MY DATE NOW</a>
+            
+            <div class="contact-info">
+                <p><span class="emoji">📍</span> Serving Pinellas Park, Tampa Bay & Surrounding Areas</p>
+                <p><span class="emoji">📧</span> Email: james@jameslloydharden.com</p>
+            </div>
+            
+            <p><strong>Dates fill up fast — especially weekends. Don't wait until it's too late.</strong></p>
+            
+            <p class="ps"><strong>P.S.</strong> — The best parties aren't the ones with the most expensive decorations. They're the ones where every child leaves smiling. Let's create that for your event.</p>
+        </div>
+    </div>
+</body>
+</html>
